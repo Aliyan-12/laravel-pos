@@ -1,0 +1,19 @@
+{
+    "name": "codewave-pos/module-config",
+    "description": "Config module for POS application.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "CodeWave\\Config\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aliyan Nasir",
+            "email": "alyannasir225@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
