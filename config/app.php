@@ -172,7 +172,7 @@ return [
         /**
          * 
          */
-        \CodeWave\Backend\BackendServiceProvider::class,
+        \CodeWavePos\Config\ConfigServiceProvider::class,
     ])->toArray(),
 
     /*

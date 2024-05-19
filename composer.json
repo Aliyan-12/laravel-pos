@@ -30,7 +30,7 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/",
-            "CodeWave\\Backend\\": "packages/codewave/module-backend/src"
+            "CodeWavePos\\Config\\": "packages/codewave/module-config/src"
         }
     },
     "scripts": {
