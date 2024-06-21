@@ -1,3 +1,15 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+div#main{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
 .icon-hover:hover {
     border-color: #3b71ca !important;
     background-color: white !important;
@@ -9,48 +21,55 @@
 
 /* Sidebar */
 .sidebar {
-    width: 250px;
+    width: 200px;
     background-color: #f5f5f5;
-    /* Default width for larger screens */
+    height:100%;
 }
 
 .option {
-    font-size: 1.25rem;
-    /* Larger text size */
-    padding: 10px;
-    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    justify-content: start;
+}
+.option:hover {
+    background-color: #f8f9fa;
     transition: background-color 0.3s;
 }
 
-.option:hover {
-    background-color: #f8f9fa;
-    /* Light grey background on hover */
+.option:hover::after {
+    width: 100%;
+}
+
+.option::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3b71ca;
+    transition: width 0.3s ease;
 }
 
 .icon {
     width: 40px;
-    /* Size of the icon */
     height: 40px;
-    /* Maintain aspect ratio */
 }
 
 /* Responsive styles */
 @media (max-width: 767px) {
     .sidebar {
         width: 100%;
-        /* Full width on small screens */
     }
 
     .option {
         font-size: 1rem;
-        /* Slightly smaller text on mobile */
         padding: 15px;
-        /* Increase padding for better touch targets */
     }
 
     .icon {
         width: 30px;
-        /* Smaller icons on mobile */
         height: 30px;
     }
 }
@@ -58,19 +77,15 @@
 @media (min-width: 768px) and (max-width: 991px) {
     .sidebar {
         width: 200px;
-        /* Adjust width for tablets */
     }
 
     .option {
         font-size: 1.1rem;
-        /* Adjust text size for tablets */
         padding: 12px;
-        /* Adjust padding for tablets */
     }
 
     .icon {
         width: 35px;
-        /* Adjust icon size for tablets */
         height: 35px;
     }
 }

@@ -29,18 +29,17 @@
 <body>
     @include('config::layout.header')
 
-    <div class="d-flex">
+    @include('config::layout.navbar')
+
+    <div id="main">
         <div>
             @include('config::layout.sidebar')
         </div>
         <div class="">
-            @include('config::layout.navbar')
-
             @yield('content')
         </div>
     </div>
-
-    @include('config::layout.footer')
 </body>
+
 
 </html>

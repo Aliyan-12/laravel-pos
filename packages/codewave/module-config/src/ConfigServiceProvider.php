@@ -12,5 +12,6 @@ class ConfigServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $this->loadRoutesFrom(__DIR__."\\Routes\\web.php");
         $this->loadViewsFrom(__DIR__."\\Resources\\Views\\", 'config');
+        $this->loadMigrationsFrom(__DIR__."\\Database\\Migrations\\");
     }
 }
