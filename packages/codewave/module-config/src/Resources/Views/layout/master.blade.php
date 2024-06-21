@@ -39,7 +39,7 @@
             @yield('content')
         </div>
     </div>
-</bod`y>
+</body>
 
 
 </html>
